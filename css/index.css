@@ -1,1 +1,6 @@
-
+.container {padding-top: 20px;}
+/*.card {margin-bottom: 20px;}*/
+.use-manual {padding:0 1rem;}
+.calc-label {width: 120px;}
+#pointSitePercent {width: 165px;}
+#buttonCalc {width: 150px;}
