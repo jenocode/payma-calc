@@ -73,6 +73,41 @@
                 </div>
               </div>
             </form>
+
+            <div align="right">
+              <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                おまけ機能
+              </button>
+            </div>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <h5 class="card-title">おまけ機能</h5>
+                <h6 class="card-subtitle mb-2 text-muted">ポイント交換分のポイントやクレカのポイントも考慮したい人向け</h6>
+                  Ponta交換などで増量したPontaなどで購入学を調整する場合<br>
+                  例）ポンタ交換で2000P→3000Pした限定Pontaを使う場合は1000
+                  <div class="mb-3 row">
+                    <label for="adjustmentAmount" class="col-auto col-form-label calc-label">調整額</label>
+                    <div class="col-auto">
+                      <input type="number" class="form-control" id="adjustmentAmount" placeholder="調整する金額" onfocus="this.select();">
+                    </div>
+                  </div>
+
+                  <!--
+                  付与されるクレジットカードのポイントを計算します。<br>
+                  計算は100円単位で1円未満切り捨てで計算しますので、200円毎にポイントが付与されるカードの場合誤差が出ます。
+                  <div class="mb-3 row">
+                    <label for="creditPercent" class="col-auto col-form-label calc-label">ポイントサイト</label>
+                      <div class="col-auto">
+                        <div class="input-group">
+                          <input type="number" class="form-control" id="creditPercent" placeholder="クレカの％" onfocus="this.select()"; aria-describedby="basic-addon">
+                        <span class="input-group-text" id="basic-addon">%</span>
+                      </div>
+                    </div>
+                  </div>
+                  -->
+
+                </div><!-- ./card -->
+            </div>
           </div>
 
           <div class="card-footer text-muted">
@@ -88,16 +123,21 @@
         <div class="use-manual">
           <h5>説明書</h5>
           <p>ペイマでの利益額、利益率をポチッと計算する計算機です。</p>
-          <ul>
-            <li>ペイマのポイントサイトのポイントは税込み価格でポイントが付きます。</li>
-            <li>月の購入額が20万円を超えるとポイントサイトのポイントが無効になるらしいので要注意。（キャンセルした注文も含むっぽい）</li>
-            <li>もっと細かく計算とか分析とか出来るけどフォームが煩雑になりそうなので後回し。</li>
-          </ul>
           <div class="text-center mb-3">
-            <div>ペイマでカートにぶっこんだ画面より</div>
+            <div>ペイマでカートに入れた画面より</div>
             <div>
               <img src="./images/payma-calc-sample.png" class="img-fluid" alt="入力例" border="1">
             </div>
+          </div>
+          <div class="mb-3">
+            <ul>
+              <li>エイチラボ非公認の自己責任野良ツールです。</li>
+              <li>ペイマのポイントサイトのポイントは税込み価格でポイントが付きます。</li>
+              <li>月の購入額が20万円を超えるとポイントサイトのポイントが無効になるらしいので要注意。（キャンセルした注文も含むっぽい）</li>
+              <li>クレジットカード分のポイントは考慮しておりません。</li>
+              <li>もっと細かく計算とか分析とか出来るけどフォームが煩雑になりそうなので後回し。</li>
+              <li>要望とかバグとかあったらペイマ板か「jeno」までDMとかなんか適当に。</li>
+            </ul>
           </div>
         </div><!-- ./manual -->
       </div><!-- ./col -->
