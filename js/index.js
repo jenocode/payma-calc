@@ -8,6 +8,9 @@ $(function() {
         const givesPoint = parseInt($("#givesPoint").val());
         const pointSitePercent = parseFloat($("#pointSitePercent").val());
         const taxIncluded = $('input:radio[name="taxIncluded"]:checked').val();
+        // おまけ機能
+        let adjustmentAmount = parseInt($("#adjustmentAmount").val()); 
+        let creditPercent = parseFloat($("#creditPercent").val());
         let errMessage = "";
 
         // フォームの初期化
@@ -21,6 +24,9 @@ $(function() {
             $('#calcResult').text(errMessage);
             return;
         };
+        // おまけ機能を初期化
+        if (isNaN(adjustmentAmount)) adjustmentAmount = 0;
+        if (isNaN(creditPercent)) creditPercent = 0;
 
         // 計算
         // ポイント合計
@@ -32,7 +38,7 @@ $(function() {
         }
         let totalPoint = givesPoint + getPoint;
         // 実価格
-        const actualPrice = productAmount - couponAmount;
+        const actualPrice = productAmount - couponAmount - adjustmentAmount;
         // 利益額
         const profitAmount = sellAmount + totalPoint - actualPrice;
         // 利益率
