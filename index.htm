@@ -23,59 +23,63 @@
             <!--h6 class="card-subtitle mb-2 text-muted">ポイントサイトのポイントをサクッと計算してみる</h6-->
             <p class="card-text">ポイントサイトの還元率からどれくらいの利益率なのかざっくり計算してみる</p>
 
-            <div class="mb-3 row">
-              <label for="productAmount" class="col-auto col-form-label calc-label">商品価格</label>
-              <div class="col-auto">
-                <input type="number" class="form-control" id="productAmount" placeholder="商品の価格" onfocus="this.select();">
-              </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="productAmount" class="col-auto col-form-label calc-label">売却金額</label>
-              <div class="col-auto">
-                <input type="number" class="form-control" id="sellAmount" placeholder="売却予定の金額">
-              </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="couponAmount" class="col-auto col-form-label calc-label">クーポン額</label>
-              <div class="col-auto">
-                <input type="number" class="form-control" id="couponAmount" placeholder="クーポンの値引き額">
-              </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="givesPoint" class="col-auto col-form-label calc-label">付与ポイント</label>
-              <div class="col-auto">
-                <input type="number" class="form-control" id="givesPoint" placeholder="付与されるポイント">
-              </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="pointSitePercent" class="col-auto col-form-label calc-label">ポイントサイト</label>
+            <form>
+              <div class="mb-3 row">
+                <label for="productAmount" class="col-auto col-form-label calc-label">商品価格</label>
                 <div class="col-auto">
-                  <div class="input-group">
-                    <input type="number" class="form-control" id="pointSitePercent" placeholder="ポイントサイトの％" aria-describedby="basic-addon2">
-                  <span class="input-group-text" id="basic-addon2">%</span>
+                  <input type="number" class="form-control" id="productAmount" placeholder="商品の価格" onfocus="this.select();">
                 </div>
               </div>
-            </div>
-            <label for="inputPassword" class="col-auto col-form-label calc-label">ポイントサイト</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="taxIncluded" id="inlineRadio1" value="1" checked>
-              <label class="form-check-label" for="inlineRadio1">税込み</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="taxIncluded" id="inlineRadio2" value="0">
-              <label class="form-check-label" for="inlineRadio2">税抜き</label>
-            </div>
-
-            <div class="row justify-content-center mt-3">
-              <div class="col-auto justify-content-center">
-                <button type="button" class="btn btn-primary mb-3" id="buttonCalc">計算</button>
+              <div class="mb-3 row">
+                <label for="productAmount" class="col-auto col-form-label calc-label">売却金額</label>
+                <div class="col-auto">
+                  <input type="number" class="form-control" id="sellAmount" placeholder="売却予定の金額">
+                </div>
               </div>
-            </div>
+              <div class="mb-3 row">
+                <label for="couponAmount" class="col-auto col-form-label calc-label">クーポン額</label>
+                <div class="col-auto">
+                  <input type="number" class="form-control" id="couponAmount" placeholder="クーポンの値引き額">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="givesPoint" class="col-auto col-form-label calc-label">付与ポイント</label>
+                <div class="col-auto">
+                  <input type="number" class="form-control" id="givesPoint" placeholder="付与されるポイント">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="pointSitePercent" class="col-auto col-form-label calc-label">ポイントサイト</label>
+                  <div class="col-auto">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="pointSitePercent" placeholder="ポイントサイトの％" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                  </div>
+                </div>
+              </div>
+              <label for="inputPassword" class="col-auto col-form-label calc-label">ポイントサイト</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="taxIncluded" id="inlineRadio1" value="1" checked>
+                <label class="form-check-label" for="inlineRadio1">税込み</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="taxIncluded" id="inlineRadio2" value="0">
+                <label class="form-check-label" for="inlineRadio2">税抜き</label>
+              </div>
+
+              <div class="row justify-content-center mt-3">
+                <div class="col-auto justify-content-center">
+                  <button type="button" class="btn btn-primary mb-3" id="buttonCalc">計算</button>
+                </div>
+              </div>
+            </form>
 
           </div>
           <div class="card-footer text-muted">
             <h5>計算結果</h5>
-            <span id="calcResult"></span>
+            <p  class="h3">
+              <span id="calcResult"></span>
+            </p>
           </div>
         </div><!-- ./card -->
       </div><!-- ./col -->
