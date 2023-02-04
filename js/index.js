@@ -24,13 +24,13 @@ $(function() {
 
         // 計算
         // ポイント合計
-//        const totalPoint = givesPoint + Math.floor(productAmount / 100 * pointSitePercent);
-        let totalPoint = 0;
+        let getPoint = 0;
         if (taxIncluded == 1) {
-            totalPoint = givesPoint + Math.floor(productAmount / 100 * pointSitePercent);
+            getPoint = Math.floor(productAmount / 100 * pointSitePercent);
         } else {
-            totalPoint = givesPoint + Math.floor(productAmount / 110 * pointSitePercent);
+            getPoint = Math.floor(productAmount / 110 * pointSitePercent);
         }
+        let totalPoint = givesPoint + getPoint;
         // 実価格
         const actualPrice = productAmount - couponAmount;
         // 利益額
@@ -38,8 +38,10 @@ $(function() {
         // 利益率
         const profitRate = (profitAmount / actualPrice * 100).toFixed(2);
         // 結果
-        let str = '<div>利益額は<strong>' + profitAmount + '円</strong>です。</div>';
-        str+= '<div>利益率は<strong>' + profitRate + '％</strong>です。</div>';
+        let str = '<div>利益額は<strong class="text-danger">' + profitAmount + '円</strong>です。</div>';
+        str+= '<div>利益率は<strong class="text-danger">' + profitRate + '％</strong>です。</div>';
+        str+= '<div><small>購入金額' + actualPrice + '円に対し、獲得予定ポイントの合計は' + totalPoint + 'Pです。</small></div>';
+        str+= '<div><small>※ポイントサイトの獲得予定ポイントは' + getPoint + 'Pです。</small></div>';
         $('#calcResult').html(str);
 
 
