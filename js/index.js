@@ -44,15 +44,22 @@ $(function() {
         // 利益率
         const profitRate = (profitAmount / actualPrice * 100).toFixed(2);
         // 結果
-        let str = '<div>利益額は<strong class="text-danger">' + profitAmount + '円</strong>です。</div>';
+        let str = '<div>利益額は<strong class="text-danger">' + profitAmount.toLocaleString() + '円</strong>です。</div>';
         str+= '<div>利益率は<strong class="text-danger">' + profitRate + '％</strong>です。</div>';
-        str+= '<div><small>購入金額' + actualPrice + '円に対し、獲得予定ポイントの合計は' + totalPoint + 'Pです。</small></div>';
-        str+= '<div><small>※ポイントサイトの獲得予定ポイントは' + getPoint + 'Pです。</small></div>';
+        str+= '<div><small>購入金額' + actualPrice.toLocaleString() + '円に対し、獲得予定ポイントの合計は' + totalPoint.toLocaleString() + 'Pです。</small></div>';
+        str+= '<div><small>※ポイントサイトの獲得予定ポイントは' + getPoint.toLocaleString() + 'Pです。</small></div>';
+        str+= '<div class="h6">';
+        str+= '<div><span class="badge bg-secondary">内訳</span></div>';
+        str+= '購入額：' + actualPrice.toLocaleString() + '円<br>';
+        str+= '売却額：' + sellAmount.toLocaleString() + '円<br>';
+        str+= 'ペイマポイント：' + givesPoint.toLocaleString() + 'P<br>';
+        str+= 'ポイントサイト：' + getPoint.toLocaleString() + 'P<br>';
+        str+= '利益額：' + profitAmount.toLocaleString() + '円<br>';
+        str+= '利益率：' + profitRate + '％<br>';
+        str+= '</div">';
         $('#calcResult').html(str);
 
-
-        console.log("data:" + errMessage);
-
+        // 入力チェック
         function validate(){
             // 商品価格
             if (isNaN(productAmount)) {
@@ -79,8 +86,6 @@ $(function() {
                 errMessage = "商品価格を数値で入力してください";
                 return;
             };
-
-            console.log("f:" + productAmount);
         };
     });
 });
