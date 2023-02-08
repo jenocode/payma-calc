@@ -50,6 +50,8 @@ $(function() {
         str+= '<div><small>※ポイントサイトの獲得予定ポイントは' + getPoint.toLocaleString() + 'Pです。</small></div>';
         str+= '<div class="h6">';
         str+= '<div><span class="badge bg-secondary">内訳</span></div>';
+        str+= '商品価格：' + productAmount.toLocaleString() + '円<br>';
+        str+= 'クーポン値引き：' + couponAmount.toLocaleString() + '円<br>';
         str+= '購入額：' + actualPrice.toLocaleString() + '円<br>';
         str+= '売却額：' + sellAmount.toLocaleString() + '円<br>';
         str+= 'ペイマポイント：' + givesPoint.toLocaleString() + 'P<br>';
