@@ -150,11 +150,45 @@
               <li>要望とかバグとかあったらペイマ板か「jeno」までDMとかなんか適当に。</li>
             </ul>
           </div>
+          <div class="text-center mb-3">
+            <button type="button" id="forcusModal" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#paymaMemo">ペイマの豆知識</button>
+          </div>
         </div><!-- ./manual -->
       </div><!-- ./col -->
     </div><!-- ./row -->
-    <!-- Optional JavaScript; choose one of the two! -->
 
+<!-- Modal -->
+<div class="modal fade" id="paymaMemo" tabindex="-1" aria-labelledby="ペイマの豆知識" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">ペイマの豆知識</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>ペイマのポイント計算がちょっと独特なのでポイントの計算機を書いてみました。</div>
+        <span class="badge rounded-pill bg-info text-dark">ペイマのポイント</span>
+        <div>支払額に<a href="https://faq.wowma.jp/toku-pro/tp-03.php" target="_blank">買い得メンバーズ</a>などの分が加算されて付きます。</div>
+        <div>支払額とはauPay残高、クレジットカードによる支払額でPontaでの支払いは対象外です（お店からのポイントのみ付く）</div>
+
+        <span class="badge rounded-pill bg-info text-dark">ポイントサイトのポイント</span>
+        <div>ポイントサイトのポイントは商品価格（税込み）で計算されます。</div>
+        <div>クーポンやpontaで支払いし支払額0円でも値引き前の価格×ポイントサイトの％です。</div>
+        <div>高還元なポイントサイトは<a href="https://dokotoku.jp/?q=aupay%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88" target="_blank">どこ得</a>で調べられます。</div>
+
+        <span class="badge rounded-pill bg-danger">ポイントサイトの注意点</span>
+        <div>1auID毎に月額２０万円以上の購入した場合、ポイントサイトのポイントは付与対象外になりますので注意！</div>
+        <div>その他の事はエイチラボのペイマ部屋のピン止めか、ペイマ部屋の優しいお兄さんたちに聞いてください。</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
